@@ -13,11 +13,11 @@ public class StockAccount{
 		String readname = null;
 		int readno = 0;
 		double readprice = 0;
+		double totalValue=0;
 		Scanner scan  = new Scanner(System.in);
+		
 		System.out.println("Please enter Number of Stocks:");
 		n=scan.nextInt();
-		
-		
 		
 		for(int i = 0; i < n; i++)  {
 			
@@ -35,7 +35,9 @@ public class StockAccount{
 		System.out.println("Number of Shares = " +readno);
 		System.out.println("Share Price = " +" Rs."+readprice +" (per each stock) ");
 		System.out.println("Total value of Stock for "+readname.toUpperCase() + " = " +" Rs." +calStock1);
-	
+		
+		totalValue=totalValue+calStock1;
+		System.out.println("::::::Total Value of Stocks:::::" +totalValue);
 		
 		
 		}
